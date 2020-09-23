@@ -8,14 +8,16 @@ import Course from './entities/course.entity';
 
 
 @Module({
-  imports: [TypeOrmModule.forRoot({
+  imports: [
+    TypeOrmModule.forRoot({
     type: 'mongodb',
     host: 'localhost',
     database: 'test2',
     entities: [Course],
     synchronize: true,
   }),
-TypeOrmModule.forFeature([Course])],
+
+    TypeOrmModule.forFeature([Course]),],
   controllers: [AppController,CoursesController],
   providers: [AppService,CoursesService],
 })

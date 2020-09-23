@@ -11,7 +11,7 @@ export class CoursesService {
         private coursesRepository: Repository<Course>,
       ) {}
     async findAll():Promise<Course[]>{
-        return this.coursesReository.find();
+        return this.coursesRepository.find();
     /*
     return [
         {
